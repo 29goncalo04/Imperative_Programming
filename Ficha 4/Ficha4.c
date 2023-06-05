@@ -93,35 +93,3 @@ int partition (int v[], int N, int x){
     }
     return contador;
 }
-
-
-
-
-
-
-/*int main(){
-    int questao, v[3]={1,0,3};
-    char palavra[20], frase[100];
-    printf ("Introduza o número da questão: ");
-    scanf ("%d", &questao);
-    getchar();
-    if (questao==1){
-        printf ("Escreva uma palavra:\n");
-        scanf ("%s", palavra);
-        printf ("Essa palavra tem %d vogais.\n", contaVogais(palavra));
-    }
-    if (questao==2){
-        printf ("Escreva uma frase:\n");
-        fgets (frase, 100, stdin);    ///////
-        printf ("Essa frase tem %d vogais repetidas.\n", retiraVogaisRep(frase));
-    }
-    if (questao==3){
-        printf ("Escreva uma palavra:\n");
-        scanf ("%s", palavra);
-        printf ("%d\n", duplicaVogais(palavra));
-    }
-    if (questao==4){
-        printf ("%d\n", ordenado(v, 3));
-    }  
-return 0;
-}*/

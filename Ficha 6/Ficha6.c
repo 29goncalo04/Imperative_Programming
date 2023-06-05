@@ -80,20 +80,3 @@ int Dpush (DStack s, int x){
     s->values [(s->sp)++] = x;
     return 0;
 }
-/*
-int *p = realloc (s->values, s->size*2*sizeof(int));
-if (p==NULL) return 1;
-else {
-    s->values = p;
-    s->size *= 2;
-}
-*/
-
-int main () {
-    STACK s1;
-    SStack sp1 = &s1;   //vai buscar o endereço de s1
-    // Spush (sp1, 3);  //para testar
-
-    struct dinStack s2;
-    DStack sp2 = &s2;
-}

@@ -5,9 +5,7 @@ typedef struct celula {
     char *palavra;
     int ocorr;
     struct celula * prox;               
-} * Palavras;
-//struct celula c={"alegria", 2, NULL};    
-//Palavras p=&c;                          
+} * Palavras;                        
 //-------1-------/                    
 void libertaLista (Palavras l){
     Palavras aux = NULL;
@@ -54,15 +52,7 @@ Palavras acrescentaInicio (Palavras l, char *p){
     l = nova;
     return l;
 }
-/*Palavras acrescentaInicio (Palavras l, char *p){
-    Palavras nova_pal=malloc (sizeof (struct celula));
-    char * pal =malloc (sizeof (char)*(strlen(p)+1));
-    strcpy (pal, p);
-    nova_pal->palavra=pal;
-    nova_pal->ocorr=1;
-    nova_pal->prox=l;
-    return nova_pal;
-}*/
+
 //---------6---------//
 Palavras acrescentaFim (Palavras l, char *p){
     Palavras nova = malloc(sizeof(struct celula));

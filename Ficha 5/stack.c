@@ -35,15 +35,3 @@ void imprimeStack(SStack s) {
         printf("| %3d |\n", s->values[i]);
     printf("+-----+\n");
 }
-
-int main() {
-    struct staticStack stack;
-    SinitStack(&stack);
-    imprimeStack(&stack);
-
-    Spush(&stack, 1);
-    Spush(&stack, 2);
-    Spush(&stack, 3);
-
-    imprimeStack(&stack);
-}

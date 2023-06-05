@@ -51,14 +51,3 @@ void quadrados (int q[], int N){
         q[i] = q[i]*q[i];
     }
 }
-//---------8--------
-/*void pascal (int v[], int N){
-    if (N>0){
-        for (int n=1; n<=N; n++){
-            v[n-1]=1;
-            for (int j=n-2; j>0; j--){
-                v[j]+=v[j-1];
-            }
-        }
-    }
-}*/

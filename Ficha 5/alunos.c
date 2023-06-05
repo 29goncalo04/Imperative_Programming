@@ -57,20 +57,3 @@ void imprimeTurma (int ind[], Aluno t[], int N){
     }
     
 }
-
-int main() {
-    Aluno t[] = {
-         {4444, "Pedro", {2,1,0,2,2,2}, 10.5}
-        ,{2222, "Luz", {2,2,2,1,0,0}, 14.5}
-        ,{7777, "Rita", {2,2,2,2,2,1}, 18.5}
-        ,{3333, "Bruno", {0,0,2,2,2,1}, 8.7}
-    };
-
-    int ind[] = {1, 3, 0, 2};
-
-    imprimeTurma(ind, t, 4);
-
-
-
-    return 0;
-}
