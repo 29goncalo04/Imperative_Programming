@@ -36,9 +36,9 @@ LInt reverseL (LInt l){
     LInt atual=l;
     LInt anterior=NULL;
     LInt proximo=NULL;
-    while (atual!=NULL){              //
-        proximo=atual->prox;         //não entendi nada
-        atual->prox=anterior;       //
+    while (atual!=NULL){           
+        proximo=atual->prox;       
+        atual->prox=anterior;      
         anterior=atual;
         atual=proximo;
     }
@@ -48,7 +48,7 @@ LInt reverseL (LInt l){
 void insertOrd (LInt * l, int valor){
     LInt novo_numero = (LInt) malloc(sizeof(LInt));      //cria um novo nó
     novo_numero->valor=valor;
-    LInt atual = *l;      //"atual" é um apontador como l
+    LInt atual = *l;      
     LInt anterior = NULL;
     while (atual!=NULL && valor>atual->valor){
         anterior=atual;
@@ -83,7 +83,7 @@ int removeOneOrd (LInt *l, int valor){
 //----------7---------
 void merge (LInt *r, LInt a, LInt b){
     if (a==NULL){
-        *r=b;                 //não entendi
+        *r=b;                
     }else if (b==NULL){
         *r=a;
     }else{
@@ -319,8 +319,8 @@ int removeMaiorL (LInt *l){
 void init (LInt *l){
     while (*l!=NULL){
         if ((*l)->prox == NULL){
-            free (*l);                   //para evitar perdas de memória o "free" vem primeiro para
-            *l=NULL;                    //libertar toda a memória e só depois é que removemos o último elemento
+            free (*l);                 
+            *l=NULL;                   
         }else {
             l=&((*l)->prox);
         }
@@ -544,7 +544,7 @@ LInt arrayToList (int v[], int N){
     }
     return nova;
 }
-//---------24----------   (não entendi)
+//---------24----------  
 LInt somasAcL (LInt l){
     LInt nova = NULL;
     LInt atual = l;
@@ -583,7 +583,7 @@ void remreps (LInt l){
         }
     }
 }
-//---------26---------    (não podia fazer malloc)
+//---------26---------   
 LInt rotateL (LInt l){
     if (l == NULL || l->prox == NULL) return l;
     LInt atual = l;
@@ -746,7 +746,7 @@ void posorder (ABin a, LInt *l){
     *l = NULL;
     posorder2 (a, l);
 }
-//-------34------ (não entendi)
+//-------34------ 
 int min (int a, int b){
     if (a<=b) return a;
     else return b;
@@ -885,18 +885,8 @@ int nivelV (ABin a, int n, int v[]){
         return esquerda+direita;
     }
 }
-//--------40-------  (não entendi)
-/*
-int dumpAbin (ABin a, int v[], int N){
-    if (N>0 && a!=NULL){
-        dumpAbin (a->esq, v, N-1);
-        *v = a->valor;
-        v++;
-        dumpAbin (a->dir, v+esquerda, N-1);
-        return 1+esquerda+direita;
-    }
-}
-*/
+//--------40-------
+
 //-------41--------
 ABin somasAcA (ABin a){
     if (a!=NULL){
@@ -1060,7 +1050,7 @@ int quantosMaiores (ABin a, int x){
         }
     }
 }
-//------50------     (criei uma árvore muito simples)
+//------50------     
 void listToBTree (LInt l, ABin *a){
     if (l!=NULL){
         ABin nova = malloc(sizeof(struct nodo));
@@ -1074,20 +1064,5 @@ void listToBTree (LInt l, ABin *a){
     }
 }
 //------51------
-/*
-int min (int a, int b){
-    if (a<=b) return a;
-    return b;
-}
 
-int deProcura (ABin a){
-    int res = 0;
-    if (a!=NULL){
-        if (a->esq->valor<a->valor && a->dir->valor>a->valor){
-            res = 1;
-        }
-        else res = 0;
-        return min (deProcura(a->esq), deProcura(a->dir));
-    }
-}
-*/
+//
